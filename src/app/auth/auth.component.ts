@@ -28,9 +28,9 @@ import {AuthService} from '../services/auth.service';
 })
 export class AuthComponent implements OnInit {
 	name:string="Имя пользователя";
-    username:string = "Сергей";
+    username:string = "serrrgggeee";
     pass:string="Пароль";
-    password:string = "d";
+    password:string = "";
 
 	constructor(private authService: AuthService) { }
 
@@ -38,8 +38,7 @@ export class AuthComponent implements OnInit {
 	}
 
 	login(): void {
-		this.authService.login(this.username, this.password)
-		.subscribe(
+		this.authService.login(this.username, this.password).subscribe(
 			(res) => {
 				console.log(res);
 			},
